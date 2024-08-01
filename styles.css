@@ -1,0 +1,366 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+@font-face {
+    font-family: 'Nasalization';
+    src: url('./nasalization/nasalization-rg.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-family: 'Nasalization', sans-serif !important;
+}
+
+
+.container {
+    max-width: 1540px;
+    height: 100dvh;
+    width: 110%;
+    background: url("./n.png") no-repeat center center;
+    background-size: cover;
+    margin: 0 auto;
+
+    padding: 50px;
+}
+
+body {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+
+.form {
+    width: 600px;
+    height: 100dvh;
+    padding: 20px;
+    object-fit: contain;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    color: #ffffff;
+
+
+}
+
+.passwordform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+    gap: 40px;
+    position: relative;
+}
+
+
+.input-group {
+    display: flex;
+    width: 80%;
+    justify-content: end;
+    gap: 20px;
+}
+
+.color {
+    color: rgb(255, 0, 0);
+}
+
+
+
+p {
+    color: #808781;
+    width: 100%;
+    font-size: 17px;
+}
+
+input:focus {
+    border-color: #19AA3A;
+    outline: none;
+
+}
+
+h1 {
+    font-size: 50px;
+    padding: 50px 0;
+}
+
+.btn {
+    position: absolute;
+    top: 16px;
+    right: 17px;
+}
+
+.inputform {
+    width: 100%;
+    position: relative;
+
+}
+
+button {
+    background: none;
+
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+    width: 300px;
+}
+
+
+input {
+    width: 241px;
+    height: 58px;
+    padding: 0.75rem;
+    border: 1px solid #1B4226;
+    background-color: #1B4226;
+    border-radius: 5px;
+    color: #ddd;
+    font-size: 18px;
+    transition: border-color 0.2s;
+}
+
+input.error {
+    border-color: red;
+}
+
+.showpassword {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    top: 19px;
+    right: 20px;
+}
+
+
+
+
+/* ///////////////////////////////////////////// */
+
+.lenguage-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.custom-select-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    margin: 0 70px 0 0;
+
+}
+
+.custom-select {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    border-radius: 5px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.select-selected {
+    padding: 8px 14px;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 5px;
+    background-color: #01A228;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    transition: border-radius 0.1s;
+}
+
+.select-selected svg {
+    margin-left: 10px;
+}
+
+.select-items {
+    display: none;
+    position: absolute;
+    background-color: #1A221B;
+    border: 1px solid #1A221B;
+    border-radius: 0 0 5px 5px;
+    z-index: 99;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    top: 100%;
+    left: 0;
+}
+
+.select-option {
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.select-option:hover {
+    background-color: #0A4418;
+}
+
+.select-option:last-child:hover {
+    background-color: #0A4418;
+    border-radius: 0 0 4px 4px;
+}
+
+.custom-select.active .select-items {
+    display: block;
+}
+
+.custom-select.active .select-selected {
+    border-radius: 4px 4px 0 0;
+}
+
+select {
+    display: none;
+}
+
+.svg {
+    font-size: 30px;
+
+}
+
+
+
+@media screen and (max-width:650px) {
+    h1 {
+        font-size: 40px;
+    }
+
+
+    .input-group {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        position: relative;
+    }
+
+    .showpassword {
+        width: 300px;
+    }
+
+    .toggle-password {
+        right: 75px;
+    }
+
+    .btn {
+        right: 75px;
+    }
+
+    .passwordform {
+        width: 70%;
+    }
+
+    br {
+        display: none;
+    }
+
+    h1 {
+        font-size: 50px;
+        padding: 60px 0;
+    }
+}
+
+
+@media screen and (max-width:590px) {
+    h1 {
+        font-size: 30px;
+        width: 400px;
+    }
+}
+
+@media screen and (max-width:490px) {
+    h1 {
+        font-size: 30px;
+        width: 400px;
+    }
+
+
+    input {
+        width: 200px;
+        height: 50px;
+    }
+
+    .passwordform {
+        width: 70%;
+    }
+
+    .btn {
+        right: 120px;
+        top: 13.8px;
+    }
+
+    .toggle-password {
+        right: 120px;
+        top: 13.8px;
+    }
+
+    p {
+        width: 100%;
+        text-align: left;
+    }
+
+    .custom-select-wrapper {
+        position: relative;
+        display: inline-block;
+        width: 80px;
+        margin: 0 60px 0 0;
+
+    }
+}
+
+
+@media screen and (max-width:480px) {
+    h1 {
+        font-size: 20px;
+        width: 300px;
+    }
+
+    p {
+        width: 80%;
+        text-align: left;
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        font-size: 15px;
+    }
+}
+
+.custom-select .select-selected {
+    position: relative;
+}
+
+.custom-select .select-selected div {
+    transition: transform 0.5s;
+}
+
+.custom-select.active .select-selected div {
+    transform: rotate(180deg);
+}
